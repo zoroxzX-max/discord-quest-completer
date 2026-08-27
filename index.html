@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Quest Completer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Discord Quest Completer</h1>
+            <p>PC Games & Console Games के Quests Auto-Complete करो</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Discord Login Section -->
+            <div class="card login-card">
+                <h2>Discord से Connect करो</h2>
+                <button id="discordLogin" class="btn btn-primary">
+                    🔗 Discord से Login करो
+                </button>
+                <div id="userInfo" class="user-info" style="display:none;">
+                    <p id="userName"></p>
+                    <button id="logout" class="btn btn-secondary">Logout</button>
+                </div>
+            </div>
+
+            <!-- Game Selection -->
+            <div class="card">
+                <h2>अपना Game चुनो</h2>
+                <div class="game-grid">
+                    <div class="game-option" data-game="fortnite">
+                        <span>🎯</span>
+                        <p>Fortnite</p>
+                    </div>
+                    <div class="game-option" data-game="valorant">
+                        <span>🔫</span>
+                        <p>Valorant</p>
+                    </div>
+                    <div class="game-option" data-game="minecraft">
+                        <span>⛏️</span>
+                        <p>Minecraft</p>
+                    </div>
+                    <div class="game-option" data-game="roblox">
+                        <span>🎲</span>
+                        <p>Roblox</p>
+                    </div>
+                    <div class="game-option" data-game="cod">
+                        <span>💥</span>
+                        <p>Call of Duty</p>
+                    </div>
+                    <div class="game-option" data-game="apex">
+                        <span>⚡</span>
+                        <p>Apex Legends</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quest Tracker -->
+            <div class="card">
+                <h2>📋 तुम्हारे Quests</h2>
+                <div id="questList" class="quest-list">
+                    <p style="text-align:center; color:#999;">कोई quest नहीं। एक game चुनो!</p>
+                </div>
+            </div>
+
+            <!-- Auto-Complete Section -->
+            <div class="card">
+                <h2>⚙️ Auto-Complete Settings</h2>
+                <div class="settings">
+                    <label class="toggle">
+                        <input type="checkbox" id="autoComplete" checked>
+                        <span>Auto-Complete Enable करो</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="notification" checked>
+                        <span>Notifications चालू रखो</span>
+                    </label>
+                </div>
+                <button id="completeAllBtn" class="btn btn-success">
+                    ✅ सभी Quests Complete करो
+                </button>
+            </div>
+
+            <!-- Progress Section -->
+            <div class="card">
+                <h2>📊 Progress</h2>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+                </div>
+                <p id="progressText" style="text-align:center; margin-top:10px;">0/0 Quests Complete</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
